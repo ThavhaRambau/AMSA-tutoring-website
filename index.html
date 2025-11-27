@@ -1,0 +1,76 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <title>AMSA Tutoring Services</title>
+</head>
+<body>
+  <header>
+    <h1>AMSA Tutoring Services</h1>
+    <p>Tutoring for Grades 8–12</p>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="enroll.html">Enroll</a></li>
+        <li><a href="#subjects">Subjects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#location">Location</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" aria-labelledby="hero-heading">
+      <h2 id="hero-heading">Grow with AMSA Tutoring</h2>
+      <p>Qualified tutors for Mathematics, Physical Sciences, Accounting, Agricultural Sciences, English, Geography, Natural Sciences, and Business Studies.</p>
+      <p>We support learners from Grade 8 through Grade 12.</p>
+      <a href="enroll.html" role="button">Enroll Now</a>
+    </section>
+
+    <section id="subjects" aria-labelledby="subjects-heading">
+      <h2 id="subjects-heading">Subjects Offered</h2>
+      <ul>
+        <li>Mathematics</li>
+        <li>Physical Sciences</li>
+        <li>Accounting</li>
+        <li>Agricultural Sciences</li>
+        <li>English</li>
+        <li>Geography</li>
+        <li>Natural Sciences</li>
+        <li>Business Studies</li>
+      </ul>
+    </section>
+
+    <section id="grades" aria-labelledby="grades-heading">
+      <h2 id="grades-heading">Grades</h2>
+      <p>Grade 8, Grade 9, Grade 10, Grade 11, Grade 12</p>
+    </section>
+
+    <section id="location" aria-labelledby="location-heading">
+      <h2 id="location-heading">Location</h2>
+      <p>
+        <a href="https://maps.app.goo.gl/zKbUnV5EDWC5nqpQ6" target="_blank" rel="noopener noreferrer">
+          View on map
+        </a>
+      </p>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p>Phone: <a href="tel:+27761063120">076 106 3120</a></p>
+      <p>Email: <a href="mailto:info@alusaniacademy.co.za">info@alusaniacademy.co.za</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> AMSA Tutoring Services</p>
+    <script>
+      // Minimal script to set year (structure only)
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
