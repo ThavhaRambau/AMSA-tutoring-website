@@ -1,0 +1,404 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+:root {
+  --primary: #03045e;
+  --accent: #fb8500;
+  --danger: #da2c38;
+  --bg: #f5f7fa;
+  --text: #222;
+  --light-text: #fff;
+  --shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--light-text);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-shadow: var(--shadow);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo-main {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff9a3c;
+}
+
+.logo-sub {
+  font-size: 0.8rem;
+  color: #f5f7fa;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: var(--light-text);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: var(--accent);
+  color: var(--primary);
+}
+
+/* Hamburger for mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #fff;
+  margin-bottom: 4px;
+  border-radius: 2px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.hamburger:hover {
+  transform: scale(1.1); /* slightly enlarge the hamburger on hover */
+}
+
+.hamburger:hover span {
+  background: var(--accent); /* change bar color to accent on hover */
+}
+
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background-color: var(--primary);
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  left: 0;
+}
+
+.mobile-nav a {
+  color: var(--light-text);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.mobile-nav a:hover {
+  background-color: var(--accent);
+  color: var(--primary);
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 120px 20px 60px;
+  background-color: #03045e;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+}
+
+.hero-left h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.hero-left p {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.hero-left .btn {
+  font-weight: bold;
+}
+
+.hero-right img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: var(--accent);
+  color: var(--primary);
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background-color: #ff9a3c;
+  color: #fff;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section.dark {
+  background-color: var(--primary);
+  color: var(--light-text);
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: inherit;
+}
+
+.section-text {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 1rem;
+  color: inherit;
+  line-height: 1.6;
+}
+
+/* =========================
+   SUBJECTS SECTION
+========================= */
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.subject-card {
+  background-color: #f5f7fa;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.subject-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.subject-card i {
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.subject-card h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.subject-card p {
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* =========================
+   PROGRAMS SECTION
+========================= */
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.program-card {
+  background-color: var(--primary);
+  color: var(--light-text);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+.program-card i {
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.program-card h3 {
+  margin-bottom: 10px;
+}
+
+.program-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* =========================
+   ENROLL BUTTON
+========================= */
+.enroll-btn {
+  font-size: 1rem;
+  padding: 12px 30px;
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+#contact {
+  margin-bottom: 40px; /* space between contact and footer */
+}
+
+#contact a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background-color: var(--primary);
+  color: var(--light-text);
+  border-top: 2px solid rgba(251, 133, 0, 0.5); /* subtle separation line */
+}
+
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .nav ul {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-left h2 {
+    font-size: 2rem;
+  }
+  .hero-left p {
+    font-size: 1rem;
+  }
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero animation */
+.hero-left, .hero-right img {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.hero-left.show, .hero-right img.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Subjects and Programs cards animation (staggered handled by observer) */
+.subject-card, .program-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.subject-card.show, .program-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,76 +1,170 @@
-<!-- index.html -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="style.css">
-  <title>AMSA Tutoring Services</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AMSA | Alusani Math & Science Academy</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-<body>
-  <header>
-    <h1>AMSA Tutoring Services</h1>
-    <p>Tutoring for Grades 8–12</p>
-    <nav aria-label="Main navigation">
+<body id="home">
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-container">
+    <div class="logo-block">
+      <h1 class="logo-main">AMSA</h1>
+      <p class="logo-sub">Alusani Math & Science Academy</p>
+    </div>
+
+    <nav class="nav">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="enroll.html">Enroll</a></li>
-        <li><a href="#subjects">Subjects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#location">Location</a></li>
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#subjects" class="nav-link">Subjects</a></li>
+        <li><a href="#programs" class="nav-link">Programs</a></li>
+        <li><a href="#enroll" class="nav-link">Enroll</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </nav>
-  </header>
+  </div>
 
-  <main>
-    <section id="hero" aria-labelledby="hero-heading">
-      <h2 id="hero-heading">Grow with AMSA Tutoring</h2>
-      <p>Qualified tutors for Mathematics, Physical Sciences, Accounting, Agricultural Sciences, English, Geography, Natural Sciences, and Business Studies.</p>
-      <p>We support learners from Grade 8 through Grade 12.</p>
-      <a href="enroll.html" role="button">Enroll Now</a>
-    </section>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-    <section id="subjects" aria-labelledby="subjects-heading">
-      <h2 id="subjects-heading">Subjects Offered</h2>
-      <ul>
-        <li>Mathematics</li>
-        <li>Physical Sciences</li>
-        <li>Accounting</li>
-        <li>Agricultural Sciences</li>
-        <li>English</li>
-        <li>Geography</li>
-        <li>Natural Sciences</li>
-        <li>Business Studies</li>
-      </ul>
-    </section>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#subjects">Subjects</a>
+    <a href="#programs">Programs</a>
+    <a href="#enroll">Enroll</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
 
-    <section id="grades" aria-labelledby="grades-heading">
-      <h2 id="grades-heading">Grades</h2>
-      <p>Grade 8, Grade 9, Grade 10, Grade 11, Grade 12</p>
-    </section>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-container">
+    <div class="hero-left fade-up">
+      <h2>Welcome to AMSA</h2>
+      <p>Empowering learners through Mathematics and Science excellence.</p>
+      <a href="#enroll" class="btn">Enroll Now</a>
+    </div>
+    <div class="hero-right fade-up">
+      <img src="hero.png" alt="Hero Image">
+    </div>
+  </div>
+</section>
 
-    <section id="location" aria-labelledby="location-heading">
-      <h2 id="location-heading">Location</h2>
-      <p>
-        <a href="https://maps.app.goo.gl/zKbUnV5EDWC5nqpQ6" target="_blank" rel="noopener noreferrer">
-          View on map
-        </a>
-      </p>
-    </section>
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2 class="section-title">About Us</h2>
+  <p class="section-text">
+    Alusani Math & Science Academy (AMSA) is dedicated to empowering students 
+    with strong foundations in Mathematics and Physical Sciences. 
+    Our programs are designed to help learners excel academically and unlock future opportunities.
+  </p>
+</section>
 
-    <section id="contact" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Contact</h2>
-      <p>Phone: <a href="tel:+27761063120">076 106 3120</a></p>
-      <p>Email: <a href="mailto:info@alusaniacademy.co.za">info@alusaniacademy.co.za</a></p>
-    </section>
-  </main>
+<!-- SUBJECTS -->
+<section id="subjects" class="section">
+  <h2 class="section-title">Subjects We Offer</h2>
+  <div class="subjects-grid">
+    <div class="subject-card fade-up">
+      <i class="fa-solid fa-square-root-variable fa-2x"></i>
+      <h3>Mathematics</h3>
+      <p>From Grade 8–12, covering algebra, calculus, geometry, and problem-solving.</p>
+    </div>
+    <div class="subject-card fade-up">
+      <i class="fa-solid fa-calculator fa-2x"></i>
+      <h3>Accounting</h3>
+      <p>Financial accounting, bookkeeping, and principles for high school learners.</p>
+    </div>
+    <div class="subject-card fade-up">
+      <i class="fa-solid fa-atom fa-2x"></i>
+      <h3>Physical Sciences</h3>
+      <p>Physics & Chemistry, theory and practical experiments for Grades 8–12.</p>
+    </div>
+    <div class="subject-card fade-up">
+      <i class="fa-solid fa-book-open fa-2x"></i>
+      <h3>English</h3>
+      <p>Language, comprehension, grammar, and literature skills.</p>
+    </div>
+    <div class="subject-card fade-up">
+      <i class="fa-solid fa-seedling fa-2x"></i>
+      <h3>Agricultural Sciences</h3>
+      <p>Crop production, animal husbandry, and environmental studies.</p>
+    </div>
+    <div class="subject-card fade-up">
+      <i class="fa-solid fa-globe fa-2x"></i>
+      <h3>Geography</h3>
+      <p>Physical and human geography, map skills, and environmental awareness.</p>
+    </div>
+    <div class="subject-card fade-up">
+      <i class="fa-solid fa-briefcase fa-2x"></i>
+      <h3>Business Studies</h3>
+      <p>Entrepreneurship, economics, and business management basics.</p>
+    </div>
+    <div class="subject-card fade-up">
+      <i class="fa-solid fa-dna fa-2x"></i>
+      <h3>Natural Sciences</h3>
+      <p>Introductory physics, chemistry, and biology concepts for foundational knowledge.</p>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    <p>&copy; <span id="year"></span> AMSA Tutoring Services</p>
-    <script>
-      // Minimal script to set year (structure only)
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-  </footer>
+<!-- PROGRAMS -->
+<section id="programs" class="section dark">
+  <h2 class="section-title">Our Programs</h2>
+  <div class="program-grid">
+    <div class="program-card fade-up">
+      <i class="fa-solid fa-calculator fa-2x"></i>
+      <h3>Math Tutoring</h3>
+      <p>Grade 8–12 Mathematics, fundamentals to advanced problem-solving.</p>
+    </div>
+    <div class="program-card fade-up">
+      <i class="fa-solid fa-flask-vial fa-2x"></i>
+      <h3>Science Tutoring</h3>
+      <p>Physics & Chemistry lessons with practical explanations and experiments.</p>
+    </div>
+    <div class="program-card fade-up">
+      <i class="fa-solid fa-clock fa-2x"></i>
+      <h3>Saturday Classes</h3>
+      <p>Extra weekend classes for focused learning and exam preparation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ENROLL -->
+<section id="enroll" class="section">
+  <h2 class="section-title">Enroll Now</h2>
+  <p class="section-text">Click the button below to enroll using our secure Google Form:</p>
+  <a class="btn enroll-btn" 
+     href="https://docs.google.com/forms/d/e/1FAIpQLScOiW2C65P6EXEQw2eq9zAIUMK2Du_iMAjzAElRcmteRx5WjQ/viewform?usp=header"
+     target="_blank">
+      Open Enrollment Form
+  </a>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section dark">
+  <h2 class="section-title">Contact Us</h2>
+  <p class="section-text">
+    📍 Location: <a href="https://maps.app.goo.gl/ydicyj4oHzZMMf4p7" target="_blank">346 Mahosi Street, Tshianangani, Ha-Mashamba, 0942</a><br>
+    📞 Phone: 071 234 5678<br>
+    ✉ Email: info@amsa.co.za
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2025 AMSA — Alusani Math & Science Academy</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

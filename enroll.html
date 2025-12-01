@@ -1,102 +1,58 @@
-<!-- enroll.html -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Enroll — AMSA Tutoring Services</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enroll – AMSA | Alusani Math & Science Academy</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Enroll — AMSA Tutoring Services</h1>
-    <nav aria-label="Enrollment navigation">
+
+<header class="header">
+  <div class="header-container">
+    <div class="logo-block">
+      <h1 class="logo-main">AMSA</h1>
+      <p class="logo-sub">Alusani Math & Science Academy</p>
+    </div>
+    <nav class="nav">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="enroll.html">Enroll</a></li>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="enroll.html" class="nav-link active">Enroll</a></li>
       </ul>
     </nav>
-  </header>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="enroll.html">Enroll</a>
+  </div>
+</header>
 
-  <main>
-    <section aria-labelledby="enroll-heading">
-      <h2 id="enroll-heading">Learner Enrollment</h2>
-      <p>Please complete this form to enroll. We will contact you to confirm details and schedule sessions.</p>
+<section class="section" style="margin-top: 100px;">
+  <h2 class="section-title">Enroll Now</h2>
+  <p class="section-text">Please complete the form below to enroll in AMSA tutoring programs:</p>
 
-      <form action="#" method="post" id="enroll-form" novalidate>
-        <!-- Learner details -->
-        <fieldset>
-          <legend>Learner details</legend>
+  <!-- Google Form Embed -->
+  <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLScOiW2C65P6EXEQw2eq9zAIUMK2Du_iMAjzAElRcmteRx5WjQ/viewform?embedded=true"
+      width="100%" 
+      height="1200"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      style="border-radius:12px; margin-top:40px;">
+      Loading…
+  </iframe>
+</section>
 
-          <label for="learner-firstname">First name</label>
-          <input type="text" id="learner-firstname" name="learner_firstname" required />
+<footer class="footer">
+  <p>© 2025 AMSA — Alusani Math & Science Academy</p>
+</footer>
 
-          <label for="learner-lastname">Last name</label>
-          <input type="text" id="learner-lastname" name="learner_lastname" required />
-
-          <label for="learner-grade">Grade</label>
-          <select id="learner-grade" name="learner_grade" required>
-            <option value="">Select grade</option>
-            <option value="8">Grade 8</option>
-            <option value="9">Grade 9</option>
-            <option value="10">Grade 10</option>
-            <option value="11">Grade 11</option>
-            <option value="12">Grade 12</option>
-          </select>
-        </fieldset>
-
-        <!-- Subjects selection -->
-        <fieldset>
-          <legend>Subjects to enroll for</legend>
-          <p>Select one or more subjects:</p>
-
-          <label><input type="checkbox" name="subjects" value="Mathematics" /> Mathematics</label>
-          <label><input type="checkbox" name="subjects" value="Physical Sciences" /> Physical Sciences</label>
-          <label><input type="checkbox" name="subjects" value="Accounting" /> Accounting</label>
-          <label><input type="checkbox" name="subjects" value="Agricultural Sciences" /> Agricultural Sciences</label>
-          <label><input type="checkbox" name="subjects" value="English" /> English</label>
-          <label><input type="checkbox" name="subjects" value="Geography" /> Geography</label>
-          <label><input type="checkbox" name="subjects" value="Natural Sciences" /> Natural Sciences</label>
-          <label><input type="checkbox" name="subjects" value="Business Studies" /> Business Studies</label>
-        </fieldset>
-
-        <!-- Contact details -->
-        <fieldset>
-          <legend>Contact details</legend>
-
-          <label for="parent-name">Parent / Guardian name</label>
-          <input type="text" id="parent-name" name="parent_name" required />
-
-          <label for="contact-phone">Phone</label>
-          <input type="tel" id="contact-phone" name="contact_phone" placeholder="0761063120" required />
-
-          <label for="contact-email">Email</label>
-          <input type="email" id="contact-email" name="contact_email" placeholder="info@alusaniacademy.co.za" required />
-        </fieldset>
-
-        <!-- Availability / notes -->
-        <fieldset>
-          <legend>Availability and notes</legend>
-
-          <label for="availability">Preferred days / times</label>
-          <textarea id="availability" name="availability" rows="3"></textarea>
-
-          <label for="notes">Additional notes</label>
-          <textarea id="notes" name="notes" rows="3"></textarea>
-        </fieldset>
-
-        <button type="submit">Submit Enrollment</button>
-        <p>Or contact us directly: <a href="tel:+27761063120">076 106 3120</a> • <a href="mailto:info@alusaniacademy.co.za">info@alusaniacademy.co.za</a></p>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p><a href="https://maps.app.goo.gl/zKbUnV5EDWC5nqpQ6" target="_blank" rel="noopener noreferrer">Find us on the map</a></p>
-    <p>&copy; <span id="year"></span> AMSA Tutoring Services</p>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-  </footer>
+<script src="script.js"></script>
 </body>
 </html>
